@@ -16,59 +16,122 @@ A plugin for cs2 that allows you to show ads in chat/center/panel
 The config is created automatically in the same place where the dll is located
 ```
 {
-  "PrintToCenterHtml": false, 	// if true, the text displayed in CENTER can use html
+  "PrintToCenterHtml": false,
   "WelcomeMessage": {
-    "MessageType": 0,                              //0 - CHAT | 1 - CENTER | 2 - CENTER HTML
-    "Message": "{RED}Welcome, {GREEN}{PLAYERNAME}" //The text that the player will see can use color tags and the `{PLAYERNAME}` tag.
+    "MessageType": 0,
+    "Message": "Welcome, {RED}{PLAYERNAME}",
+    "DisplayDelay": 5
   },
   "Ads": [
     {
-      "Interval": 35,			//a timer after which the advertisement will be shown
+      "Interval": 35,
       "Messages": [
         {
           "Chat": "IP: {RED}{IP}:{PORT}",// Chat advertising
           "Center": "Server name: {SERVERNAME}" 		// Advertising in the center
         },
         {
-          "Chat": "{map_name}",
-          "Center": "Center Advertising 2"
+          "Chat": "{current_time}"
+        },
+        {
+          "Chat": "{map_name}"
+        },
+		{
+          "Chat": "{LIGHTBLUE}HOSTING {DEFAULT}★ ASTRAL ★ {LIGHTPURPLE}|{DEFAULT} Entre em nosso Discord e fique por dentro de todas as novidades!{LIME} https://discord.gg/sxq69nuQ7T"
         }
       ]
     },
+	
+	
     {
       "Interval": 40,
       "Messages": [
         {
-          "Chat": "{current_time}"
-	//you can only write "Chat" or "Center".
+          "Chat": "{BLUE}HOSTING {DEFAULT}★ ASTRAL ★ {LIGHTPURPLE}|{DEFAULT} Comandos Basicos {LIME}!top{DEFAULT}, {LIME}!rank{DEFAULT}, Skin Players, {LIME}!MD{DEFAULT}, Skin Wepom {LIME}!ws"
         },
         {
-          "Chat": "{RED}Chat {BLUE}Advertising {GREEN}4"
+          "Chat": "{BLUE}HOSTING {DEFAULT}★ ASTRAL ★ {LIGHTPURPLE}SERVER!",
+		"Center": "Bem Vindo ao Servidor do ♪♪ ★ ASTRAL ★♪♪"
         }
-      ] 
+      ]
     }
   ],
-  "Panel":[
-	"<font color='#ff00ff'>Panel Advertising 1</font>",   // Advertising in the panel, only at the end of the round
-	"Panel Advertising 2",
-	"Panel Advertising 3"
-  ],
-  "DefaultLang": "US", // Default language (it will be shown if there is no player's language in the config)
+  "Panel": null,
+  "DefaultLang": "US",
   "LanguageMessages": {
-    "map_name": { 	//It is what you write that will define your message
-      "RU": "{GRAY}Текущая карта: {RED}{MAP}",
-      "US": "{GRAY}Current map: {RED}{MAP}",
-      "CN": "{GRAY}当前地图: {RED}{MAP}"
+    "map_name": {
+      "RU": "\u0422\u0435\u043A\u0443\u0449\u0430\u044F \u043A\u0430\u0440\u0442\u0430: {MAP}",
+      "US": "Mapa Atual: {MAP}",
+      "CN": "{GRAY}\u5F53\u524D\u5730\u56FE: {RED}{MAP}"
     },
     "current_time": {
-      "RU": "{GRAY}Текущее время: {RED}{TIME}",
-      "US": "{GRAY}Current time: {RED}{TIME}",
-      "CN": "{GRAY}当前时间: {RED}{TIME}"
+      "RU": "{GRAY}\u0422\u0435\u043A\u0443\u0449\u0435\u0435 \u0432\u0440\u0435\u043C\u044F: {RED}{TIME}",
+      "US": "Hora Atual: {RED}{TIME}",
+      "CN": "{GRAY}\u5F53\u524D\u65F6\u95F4: {RED}{TIME}"
     }
   },
   "MapsName": {
     "de_mirage": "Mirage",
-    "de_dust2": "Dust II"
+    "de_dust": "Dust II"
+  }
+}{
+  "PrintToCenterHtml": false,
+  "WelcomeMessage": {
+    "MessageType": 0,
+    "Message": "Welcome, {RED}{PLAYERNAME}",
+    "DisplayDelay": 5
+  },
+  "Ads": [
+    {
+      "Interval": 35,
+      "Messages": [
+        {
+          "Chat": "IP: {RED}{IP}:{PORT}",// Chat advertising
+          "Center": "Server name: {SERVERNAME}" 		// Advertising in the center
+        },
+        {
+          "Chat": "{current_time}"
+        },
+        {
+          "Chat": "{map_name}"
+        },
+		{
+          "Chat": "{LIGHTBLUE}HOSTING {DEFAULT}★ ASTRAL ★ {LIGHTPURPLE}|{DEFAULT} Entre em nosso Discord e fique por dentro de todas as novidades!{LIME} https://discord.gg/sxq69nuQ7T"
+        }
+      ]
+    },
+	
+	
+    {
+      "Interval": 40,
+      "Messages": [
+        {
+          "Chat": "{BLUE}HOSTING {DEFAULT}★ ASTRAL ★ {LIGHTPURPLE}|{DEFAULT} Comandos Basicos {LIME}!top{DEFAULT}, {LIME}!rank{DEFAULT}, Skin Players, {LIME}!MD{DEFAULT}, Skin Wepom {LIME}!ws"
+        },
+        {
+          "Chat": "{BLUE}HOSTING {DEFAULT}★ ASTRAL ★ {LIGHTPURPLE}SERVER!",
+		"Center": "Bem Vindo ao Servidor do ♪♪ ★ ASTRAL ★♪♪"
+        }
+      ]
+    }
+  ],
+  "Panel": null,
+  "DefaultLang": "US",
+  "LanguageMessages": {
+    "map_name": {
+      "RU": "\u0422\u0435\u043A\u0443\u0449\u0430\u044F \u043A\u0430\u0440\u0442\u0430: {MAP}",
+      "US": "Mapa Atual: {MAP}",
+      "CN": "{GRAY}\u5F53\u524D\u5730\u56FE: {RED}{MAP}"
+    },
+    "current_time": {
+      "RU": "{GRAY}\u0422\u0435\u043A\u0443\u0449\u0435\u0435 \u0432\u0440\u0435\u043C\u044F: {RED}{TIME}",
+      "US": "Hora Atual: {RED}{TIME}",
+      "CN": "{GRAY}\u5F53\u524D\u65F6\u95F4: {RED}{TIME}"
+    }
+  },
+  "MapsName": {
+    "de_mirage": "Mirage",
+    "de_dust": "Dust II"
   }
 }
 
